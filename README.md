@@ -1,70 +1,70 @@
-# Consumo de API com RestTemplate
+# API with RestTemplate
 
-Este projeto consiste em uma API que consome uma API externa (https://dummyjson.com/products) e fornece três endpoints
-que permitem:
+This project consists of an API that consumes an external API (https://dummyjson.com/products) and provides three endpoints
+that allow:
 
-1. Buscar todos os produtos.
-2. Buscar um produto por ID.
-3. Buscar produtos filtrados por nome.
+1. Search all products.
+2. Search for a product by ID.
+3. Search for products filtered by name.
 
-Todas as funcionalidades do projeto são cobertas por testes, tanto nos controllers quanto na camada de cliente que se
-conecta à API externa.
+All project functionalities are covered by tests, both in the controllers and in the client layer that is
+connects to external API.
 
 ## Endpoints
 
-### Buscar Todos os Produtos
+### Search All Products
 
-Este endpoint permite buscar todos os produtos disponíveis.
+This endpoint allows you to search for all available products.
 
 - **URL:** `/api/products`
-- **Método:** GET
-- **Exemplo de Requisição:** `http://localhost:8080/api/products`
+- **Method:** GET
+- **Request Example:** `http://localhost:8080/api/products`
 
-### Buscar Produto por ID
+### Search Product by ID
 
-Este endpoint permite buscar um produto específico por ID.
+This endpoint allows you to search for a specific product by ID.
 
 - **URL:** `/api/products/{id}`
-- **Método:** GET
-- **Exemplo de Requisição:** `http://localhost:8080/api/products/1`
+- **Method:** GET
+- **Request Example:** `http://localhost:8080/api/products/1`
 
-### Buscar Produtos por Nome
+### Search Products by Name
 
-Este endpoint permite buscar produtos filtrados por nome.
+This endpoint allows you to search for products filtered by name.
 
 - **URL:** `/api/products/search`
-- **Método:** GET
-- **Parâmetros de Consulta:** `q` (nome do produto)
-- **Exemplo de Requisição:** `http://localhost:8080/api/products/search?q=produto`
+- **Method:** GET
+- **Query Parameters:** `q` (product name)
+- **Request Example:** `http://localhost:8080/api/products/search?q=produto`
 
-## Testes
+## Tests
 
-Todas as funcionalidades deste projeto são testadas para garantir seu correto funcionamento. Os testes abrangem tanto os
-controllers quanto a camada de cliente que se comunica com a API externa.
+All features of this project are tested to ensure they work correctly. The tests cover both
+controllers and the client layer that communicates with the external API.
 
-## Documentação no Swagger
+## Documentation on Swagger
 
-Este projeto possui documentação no Swagger, que fornece informações detalhadas sobre os endpoints e permite testá-los
-interativamente.
+This project has documentation on Swagger, which provides detailed information about the endpoints and allows you to test them
+interactively.
 
-Para acessar a documentação no Swagger, basta abrir o seguinte URL em seu navegador:
+To access the documentation on Swagger, simply open the following URL in your browser:
 
 [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
-Certifique-se de que o aplicativo esteja em execução para acessar a documentação.
+Make sure the application is running to access the documentation.
 
-## Como Executar o Projeto
+## How to Execute the Project
 
-Para executar o projeto, siga estas etapas:
+To run the project, follow these steps:
 
-1. Clone o repositório para o seu ambiente local.
-2. Certifique-se de ter o Java e o Maven instalados.
-3. Navegue até o diretório do projeto e execute o seguinte comando:
+1. Clone the repository to your local environment.
+2. Make sure you have Java and Maven installed.
+3. Navigate to the project directory and run the following command:
 
-```agsl
+```
 mvn spring-boot:run
 ```
 
-4. O aplicativo estará disponível em [http://localhost:8080](http://localhost:8080).
+4. The application will be available at [http://localhost:8080](http://localhost:8080).
 
-Agora você pode usar os endpoints e acessar a documentação no Swagger para explorar o projeto.
+You can now use the endpoints and access documentation in Swagger to explore the project.
