@@ -1,4 +1,4 @@
-package br.com.pcvj.mock;
+package br.com.pcvj.unit.mock;
 
 import br.com.pcvj.dto.ProductResponse;
 import br.com.pcvj.dto.ProductResponseList;

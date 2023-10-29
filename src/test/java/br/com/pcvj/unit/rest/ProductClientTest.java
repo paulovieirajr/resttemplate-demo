@@ -1,10 +1,12 @@
-package br.com.pcvj.rest;
+package br.com.pcvj.unit.rest;
 
 import br.com.pcvj.dto.ProductResponse;
 import br.com.pcvj.exception.ResourceNotFoundException;
-import br.com.pcvj.mock.ProductFactoryMock;
+import br.com.pcvj.rest.ProductClient;
+import br.com.pcvj.unit.mock.ProductFactoryMock;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;
@@ -21,6 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 @RestClientTest(ProductClient.class)
+@Tag("Unit")
 class ProductClientTest {
 
     @Autowired

@@ -55,7 +55,7 @@ public class ProductController {
             @ApiResponse(responseCode = "400", description = "Parameter not informed",
                     content = @Content)})
     @GetMapping("/search")
-    public List<ProductResponse> searchProducts(@RequestParam String search) {
-        return productClient.searchProducts(search);
+    public List<ProductResponse> searchProducts(@RequestParam String name) {
+        return productClient.searchProducts(name);
     }
 }

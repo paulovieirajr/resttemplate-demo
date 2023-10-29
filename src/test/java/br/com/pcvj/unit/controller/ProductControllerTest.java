@@ -1,10 +1,12 @@
-package br.com.pcvj.controller;
+package br.com.pcvj.unit.controller;
 
+import br.com.pcvj.controller.ProductController;
 import br.com.pcvj.dto.ProductResponse;
 import br.com.pcvj.exception.ResourceNotFoundException;
-import br.com.pcvj.mock.ProductFactoryMock;
 import br.com.pcvj.rest.ProductClient;
+import br.com.pcvj.unit.mock.ProductFactoryMock;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(ProductController.class)
+@Tag("Unit")
 class ProductControllerTest {
 
     @Autowired
@@ -83,7 +86,7 @@ class ProductControllerTest {
         String productResponseListJson = productFactoryMock.createProductResponseListJson(productListMock);
         this.mockMvc
                 .perform(get("/products/search")
-                        .param("search", "test")
+                        .param("name", "test")
                         .accept("application/json"))
                 .andExpect(status().isOk())
                 .andExpect(content().json(productResponseListJson));
@@ -95,7 +98,7 @@ class ProductControllerTest {
 
         this.mockMvc
                 .perform(get("/products/search")
-                        .param("search", "test")
+                        .param("name", "test")
                         .accept("application/json"))
                 .andExpect(status().isOk())
                 .andExpect(content().json("[]"));
