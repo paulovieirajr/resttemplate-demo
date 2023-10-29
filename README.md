@@ -1,6 +1,7 @@
 # API with RestTemplate
 
-This project consists of an API that consumes an external API (https://dummyjson.com/products) and provides three endpoints
+This project consists of an API that consumes an external API (https://dummyjson.com/products) and provides three
+endpoints
 that allow:
 
 1. Search all products.
@@ -42,9 +43,26 @@ This endpoint allows you to search for products filtered by name.
 All features of this project are tested to ensure they work correctly. The tests cover both
 controllers and the client layer that communicates with the external API.
 
+### Unit Tests
+
+To run the unit tests, simply run the following command:
+
+```
+mvn test -Punit-tests
+```
+
+### Integration Tests
+
+To run the integration tests, simply run the following command:
+
+```
+mvn verify -Pintegration-tests
+```
+
 ## Documentation on Swagger
 
-This project has documentation on Swagger, which provides detailed information about the endpoints and allows you to test them
+This project has documentation on Swagger, which provides detailed information about the endpoints and allows you to
+test them
 interactively.
 
 To access the documentation on Swagger, simply open the following URL in your browser:
