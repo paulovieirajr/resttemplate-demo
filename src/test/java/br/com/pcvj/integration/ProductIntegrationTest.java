@@ -40,7 +40,7 @@ public class ProductIntegrationTest {
                 apiAddressTest + port + "/products",
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<List<ProductResponse>>() {
+                new ParameterizedTypeReference<>() {
                 }
         );
         List<ProductResponse> listProductResponse = responseEntity.getBody();
@@ -54,7 +54,7 @@ public class ProductIntegrationTest {
                 apiAddressTest + port + "/products/1",
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<ProductResponse>() {
+                new ParameterizedTypeReference<>() {
                 }
         );
         ProductResponse productResponse = responseEntity.getBody();
@@ -77,7 +77,7 @@ public class ProductIntegrationTest {
                 apiAddressTest + port + "/products/search?name=iphone",
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<List<ProductResponse>>() {
+                new ParameterizedTypeReference<>() {
                 }
         );
         List<ProductResponse> listProductResponse = responseEntity.getBody();
